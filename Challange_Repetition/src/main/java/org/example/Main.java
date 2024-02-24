@@ -5,8 +5,9 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-        Source source =  new Source("axxz", "ywzy");
-        source.iterateString();
+        Source source =  new Source("wlylcee", "auboksw");
+        int count = source.solution();
+        System.out.println("Min Distinct :" + count);
     }
 }
 

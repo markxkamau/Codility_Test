@@ -6,6 +6,7 @@ public class Source {
     public String P;
     public String Q;
 
+    public Source(){}
     public Source(String p, String q) {
         this.P = p;
         this.Q = q;
@@ -92,13 +93,13 @@ public class Source {
 
     }
 
-    public int solution(String p, String q) {
+    public int solution() {
         // Check for equal length
-        if (p.length() != q.length()) {
+        if (!checkLength()) {
             return -1; // Handle invalid input
         }
 
-        List<String> possibleStrings = generatePossibleStrings(p, q);
+        List<String> possibleStrings = generatePossibleStrings(P, Q);
         int minDistinct = Integer.MAX_VALUE;
 
         for (String str : possibleStrings) {
@@ -108,7 +109,4 @@ public class Source {
 
         return minDistinct;
     }
-}
-
-
 }
